@@ -4,9 +4,9 @@
 /* @var $content string */
 
 use app\widgets\Alert;
-use yii\bootstrap4\NavBar;
+use yii\bootstrap\NavBar;
 use yii\helpers\Html;
-use yii\bootstrap4\Nav;
+use yii\bootstrap\Nav;
 use yii\web\View;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
@@ -29,7 +29,7 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    NavBar::begin([
+    /*NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
@@ -46,7 +46,7 @@ AppAsset::register($this);
         ],
 
     ]);
-    NavBar::end();
+    NavBar::end();*/
     ?>
 
     <div class="container mt-3">
