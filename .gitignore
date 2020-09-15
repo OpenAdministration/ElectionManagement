@@ -1,0 +1,5 @@
+/vendor/
+/config/names.php
+/config/secrets.php
+/runtime/
+/web/assets/

@@ -1,0 +1,57 @@
+{
+    "name": "open-administration/yii2-new-app-template",
+    "description": "Template for new Yii2 Applications",
+    "minimum-stability": "dev",
+    "license": "tba",
+    "authors": [
+        {
+            "name": "Lukas Staab",
+            "email": "lukas.staab@posteo.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "yiisoft/yii2": "~2.0.37",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "yiisoft/yii2-bootstrap4": "~2.0.8",
+        "yidas/yii2-bower-asset": "dev-master"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.1.0",
+        "yiisoft/yii2-faker": "~2.0.0"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": true
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall"
+        ],
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject",
+            "yii\\composer\\Installer::postInstall"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ]
+        }
+    },
+    "repositories": {
+        "packagist.org": {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
+    }
+}
